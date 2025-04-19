@@ -33,7 +33,7 @@
                     <failIfNoTests>false</failIfNoTests>
                 </configuration>
             </plugin>
-            
+
         </plugins>
     </build>
 
