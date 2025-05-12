@@ -31,6 +31,24 @@ public class MovieManagerTest {
     }
 
     @Test
+    public void addOverLimitMovie() {
+        MovieManager manager = new MovieManager();
+
+        manager.addMovie("Бладшот");
+        manager.addMovie("Вперёд");
+        manager.addMovie("Отель Белград");
+        manager.addMovie("Джентельмены");
+        manager.addMovie("Человек-невидимка");
+        manager.addMovie("Тролли. Мировой тур");
+        manager.addMovie("Номер один");
+        String[] expected = {"Бладшот", "Вперёд", "Отель Белград", "Джентельмены", "Человек-невидимка", "Тролли. Мировой тур", "Номер один"};
+        String[] actual = manager.findAll();
+
+        Assertions.assertArrayEquals(expected, actual);
+
+    }
+
+    @Test
     public void shouldLastMinMovie() {
         MovieManager manager = new MovieManager();
 
