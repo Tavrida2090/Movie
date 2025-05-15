@@ -50,7 +50,7 @@ public class MovieManagerTest {
 
     @Test
     public void shouldLastMinMovie() {
-        MovieManager manager = new MovieManager();
+        MovieManager manager = new MovieManager(8);
 
         manager.addMovie("Бладшот");
         manager.addMovie("Вперёд");
@@ -64,7 +64,7 @@ public class MovieManagerTest {
     @Test
     public void shouldAddLastUnderLimitMovie() {
 
-        MovieManager manager = new MovieManager();
+        MovieManager manager = new MovieManager(5);
         manager.addMovie("Бладшот");
         manager.addMovie("Вперёд");
         manager.addMovie("Отель Белград");
